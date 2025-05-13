@@ -1,0 +1,333 @@
+/* themes/digitalisation.css - Styles spécifiques au thème digitalisation */
+
+/* Variables de thème */
+.theme-digitalisation {
+    /* Couleurs principales */
+    --primary-color: #2ECC71;
+    --primary-light: rgba(255, 125, 77, 0.1);
+    --primary-dark: #2ECC71;
+    
+    /* Couleurs neutres */
+    --text-color: #222233;
+    --text-secondary: #4d4d5e;
+    --bg-light: #f5fafc;
+    --bg-dark: #222233;
+    --white: #ffffff;
+    
+    /* Espacement */
+    --spacing-sm: 1rem;
+    --spacing-md: 2rem;
+    --spacing-lg: 3rem;
+    --spacing-xl: 5rem;
+    
+    /* Border radius */
+    --border-radius: 12px;
+    
+    /* Box shadow */
+    --shadow-sm: 0 5px 15px rgba(0, 0, 0, 0.05);
+    --shadow-md: 0 15px 30px rgba(0, 0, 0, 0.1);
+    --shadow-lg: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Section Héro */
+.theme-digitalisation .hero-section {
+    background: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), 
+                url('digital-bg.jpg') center/cover no-repeat;
+    color: var(--white);
+    padding: 8rem 2rem;
+    text-align: center;
+    position: relative;
+}
+
+.theme-digitalisation .hero-section h1 {
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+    color: var(--white);
+}
+
+.theme-digitalisation .hero-section .subtitle {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Section Présentation */
+.theme-digitalisation .presentation-section {
+    padding: var(--spacing-xl) 2rem;
+    text-align: center;
+    background-color: var(--bg-light);
+}
+
+.theme-digitalisation .presentation-section .icon-header {
+    font-size: 3rem;
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+}
+
+.theme-digitalisation .presentation-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    color: var(--text-color);
+}
+
+.theme-digitalisation .presentation-section p {
+    font-size: 1.2rem;
+    max-width: 800px;
+    margin: 0 auto;
+    color: var(--text-secondary);
+}
+
+/* Grille de services */
+.theme-digitalisation .services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 4rem 0;
+}
+
+.theme-digitalisation .admin-service-card {
+    background: var(--white);
+    border-radius: var(--border-radius);
+    padding: 2rem;
+    box-shadow: var(--shadow-sm);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-top: 4px solid var(--primary-color);
+}
+
+.theme-digitalisation .admin-service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-md);
+}
+
+.theme-digitalisation .service-icon {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+}
+
+.theme-digitalisation .admin-service-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: var(--text-color);
+}
+
+.theme-digitalisation .admin-service-card p {
+    color: var(--text-secondary);
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+
+.theme-digitalisation .service-link {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    transition: color 0.3s ease;
+}
+
+.theme-digitalisation .service-link:hover {
+    color: var(--primary-dark);
+}
+
+.theme-digitalisation .service-link i {
+    margin-left: 0.5rem;
+    transition: transform 0.3s ease;
+}
+
+.theme-digitalisation .service-link:hover i {
+    transform: translateX(5px);
+}
+
+/* Section Avantages */
+.theme-digitalisation .benefits-section {
+    padding: var(--spacing-xl) 2rem;
+    background-color: var(--primary-light);
+}
+
+.theme-digitalisation .benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.theme-digitalisation .benefit-item {
+    background: var(--white);
+    border-radius: var(--border-radius);
+    padding: 2rem;
+    text-align: center;
+    box-shadow: var(--shadow-sm);
+    transition: transform 0.3s ease;
+}
+
+.theme-digitalisation .benefit-item:hover {
+    transform: translateY(-5px);
+}
+
+.theme-digitalisation .benefit-icon {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+}
+
+.theme-digitalisation .benefit-item h3 {
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+    color: var(--text-color);
+}
+
+.theme-digitalisation .benefit-item p {
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+
+/* Section Contact */
+.theme-digitalisation .contact-section {
+    padding: var(--spacing-xl) 2rem;
+    text-align: center;
+    background-color: var(--bg-dark);
+    color: var(--white);
+}
+
+.theme-digitalisation .contact-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.theme-digitalisation .contact-section p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Boutons */
+.theme-digitalisation .btn {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: var(--white);
+    padding: 1rem 2rem;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.theme-digitalisation .btn:hover {
+    background-color: var(--primary-dark);
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-lg);
+}
+
+/* Titres de section */
+.theme-digitalisation .section-title {
+    text-align: center;
+    margin-bottom: 3rem;
+    position: relative;
+    color: var(--text-color);
+}
+
+.theme-digitalisation .section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background-color: var(--primary-color);
+}
+
+/* Formulaire */
+.theme-digitalisation .contact-form {
+    background-color: var(--white);
+    border-radius: var(--border-radius);
+    padding: var(--spacing-md);
+    box-shadow: var(--shadow-md);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.theme-digitalisation .form-group {
+    margin-bottom: var(--spacing-sm);
+}
+
+.theme-digitalisation .form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: var(--text-color);
+    font-weight: 500;
+}
+
+.theme-digitalisation .form-control {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.theme-digitalisation .form-control:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px var(--primary-light);
+    outline: none;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .theme-digitalisation .hero-section h1 {
+        font-size: 2.5rem;
+    }
+    
+    .theme-digitalisation .hero-section .subtitle {
+        font-size: 1.2rem;
+    }
+    
+    .theme-digitalisation .presentation-section h2,
+    .theme-digitalisation .section-title {
+        font-size: 2rem;
+    }
+    
+    .theme-digitalisation .presentation-section,
+    .theme-digitalisation .benefits-section,
+    .theme-digitalisation .contact-section {
+        padding: var(--spacing-lg) 1.5rem;
+    }
+    
+    .theme-digitalisation .services-grid,
+    .theme-digitalisation .benefits-grid {
+        grid-template-columns: 1fr;
+        max-width: 500px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+/* Mode sombre pour le thème digitalisation */
+@media (prefers-color-scheme: dark) {
+    .theme-digitalisation {
+        --bg-light: #1a2531;
+        --text-color: #e6e9f0;
+        --text-secondary: #b3b9c5;
+    }
+    
+    .theme-digitalisation .admin-service-card,
+    .theme-digitalisation .benefit-item,
+    .theme-digitalisation .contact-form {
+        background-color: #263545;
+        border-color: var(--primary-color);
+    }
+    
+    .theme-digitalisation .admin-service-card h3,
+    .theme-digitalisation .benefit-item h3,
+    .theme-digitalisation .form-group label {
+        color: var(--white);
+    }
+}

@@ -1,0 +1,333 @@
+/* themes/communication.css - Styles spécifiques au thème communication */
+
+/* Variables de thème */
+.theme-communication {
+    /* Couleurs principales */
+    --primary-color: #F5A623;
+    --primary-light: rgba(50, 180, 199, 0.1);
+    --primary-dark: #F5A623;
+    
+    /* Couleurs neutres */
+    --text-color: #333333;
+    --text-secondary: #555;
+    --bg-light: #fefaf7;
+    --bg-dark: #333333;
+    --white: #ffffff;
+    
+    /* Espacement */
+    --spacing-sm: 1rem;
+    --spacing-md: 2rem;
+    --spacing-lg: 3rem;
+    --spacing-xl: 5rem;
+    
+    /* Border radius */
+    --border-radius: 12px;
+    
+    /* Box shadow */
+    --shadow-sm: 0 5px 15px rgba(0, 0, 0, 0.05);
+    --shadow-md: 0 15px 30px rgba(0, 0, 0, 0.1);
+    --shadow-lg: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Section Héro */
+.theme-communication .hero-section {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
+                url('communication-bg.jpg') center/cover no-repeat;
+    color: var(--white);
+    padding: 8rem 2rem;
+    text-align: center;
+    position: relative;
+}
+
+.theme-communication .hero-section h1 {
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+    color: var(--white);
+}
+
+.theme-communication .hero-section .subtitle {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Section Présentation */
+.theme-communication .presentation-section {
+    padding: var(--spacing-xl) 2rem;
+    text-align: center;
+    background-color: var(--bg-light);
+}
+
+.theme-communication .presentation-section .icon-header {
+    font-size: 3rem;
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+}
+
+.theme-communication .presentation-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    color: var(--text-color);
+}
+
+.theme-communication .presentation-section p {
+    font-size: 1.2rem;
+    max-width: 800px;
+    margin: 0 auto;
+    color: var(--text-secondary);
+}
+
+/* Grille de services */
+.theme-communication .services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 4rem 0;
+}
+
+.theme-communication .admin-service-card {
+    background: var(--white);
+    border-radius: var(--border-radius);
+    padding: 2rem;
+    box-shadow: var(--shadow-sm);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-top: 4px solid var(--primary-color);
+}
+
+.theme-communication .admin-service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-md);
+}
+
+.theme-communication .service-icon {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+}
+
+.theme-communication .admin-service-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: var(--text-color);
+}
+
+.theme-communication .admin-service-card p {
+    color: var(--text-secondary);
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+
+.theme-communication .service-link {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    transition: color 0.3s ease;
+}
+
+.theme-communication .service-link:hover {
+    color: var(--primary-dark);
+}
+
+.theme-communication .service-link i {
+    margin-left: 0.5rem;
+    transition: transform 0.3s ease;
+}
+
+.theme-communication .service-link:hover i {
+    transform: translateX(5px);
+}
+
+/* Section Avantages */
+.theme-communication .benefits-section {
+    padding: var(--spacing-xl) 2rem;
+    background-color: var(--primary-light);
+}
+
+.theme-communication .benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.theme-communication .benefit-item {
+    background: var(--white);
+    border-radius: var(--border-radius);
+    padding: 2rem;
+    text-align: center;
+    box-shadow: var(--shadow-sm);
+    transition: transform 0.3s ease;
+}
+
+.theme-communication .benefit-item:hover {
+    transform: translateY(-5px);
+}
+
+.theme-communication .benefit-icon {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+}
+
+.theme-communication .benefit-item h3 {
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+    color: var(--text-color);
+}
+
+.theme-communication .benefit-item p {
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+
+/* Section Contact */
+.theme-communication .contact-section {
+    padding: var(--spacing-xl) 2rem;
+    text-align: center;
+    background-color: var(--bg-dark);
+    color: var(--white);
+}
+
+.theme-communication .contact-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.theme-communication .contact-section p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Boutons */
+.theme-communication .btn {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: var(--white);
+    padding: 1rem 2rem;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.theme-communication .btn:hover {
+    background-color: var(--primary-dark);
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-lg);
+}
+
+/* Titres de section */
+.theme-communication .section-title {
+    text-align: center;
+    margin-bottom: 3rem;
+    position: relative;
+    color: var(--text-color);
+}
+
+.theme-communication .section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background-color: var(--primary-color);
+}
+
+/* Formulaire */
+.theme-communication .contact-form {
+    background-color: var(--white);
+    border-radius: var(--border-radius);
+    padding: var(--spacing-md);
+    box-shadow: var(--shadow-md);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.theme-communication .form-group {
+    margin-bottom: var(--spacing-sm);
+}
+
+.theme-communication .form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: var(--text-color);
+    font-weight: 500;
+}
+
+.theme-communication .form-control {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.theme-communication .form-control:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px var(--primary-light);
+    outline: none;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .theme-communication .hero-section h1 {
+        font-size: 2.5rem;
+    }
+    
+    .theme-communication .hero-section .subtitle {
+        font-size: 1.2rem;
+    }
+    
+    .theme-communication .presentation-section h2,
+    .theme-communication .section-title {
+        font-size: 2rem;
+    }
+    
+    .theme-communication .presentation-section,
+    .theme-communication .benefits-section,
+    .theme-communication .contact-section {
+        padding: var(--spacing-lg) 1.5rem;
+    }
+    
+    .theme-communication .services-grid,
+    .theme-communication .benefits-grid {
+        grid-template-columns: 1fr;
+        max-width: 500px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+/* Mode sombre pour le thème communication */
+@media (prefers-color-scheme: dark) {
+    .theme-communication {
+        --bg-light: #2e2e30;
+        --text-color: #f0f0f0;
+        --text-secondary: #c0c0c0;
+    }
+    
+    .theme-communication .admin-service-card,
+    .theme-communication .benefit-item,
+    .theme-communication .contact-form {
+        background-color: #3a3a3c;
+        border-color: var(--primary-color);
+    }
+    
+    .theme-communication .admin-service-card h3,
+    .theme-communication .benefit-item h3,
+    .theme-communication .form-group label {
+        color: var(--white);
+    }
+}
