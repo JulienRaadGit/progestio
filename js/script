@@ -25,25 +25,12 @@ window.addEventListener('scroll', function() {
 
 // Updated includeHTML function for your specific case
 function includeHTML(file, elementId) {
-    fetch(`./${file}`)  // Use relative path from current location
-        .then(response => {
-            if (!response.ok) throw new Error('File not found');
-            return response.text();
-        })
+    fetch(`/progestio/html/${file}`)
+        .then(response => response.text())
         .then(data => {
-            const element = document.getElementById(elementId);
-            if (element) element.innerHTML = data;
+            document.getElementById(elementId).innerHTML = data;
         })
-        .catch(error => {
-            console.error('Error loading file:', error);
-            // Fallback to absolute path if relative fails
-            fetch(`/html/${file}`)
-                .then(response => response.text())
-                .then(data => {
-                    const element = document.getElementById(elementId);
-                    if (element) element.innerHTML = data;
-                });
-        });
+        .catch(error => console.error('Error loading file:', error));
 }
 
 // Fonction d'initialisation pour toutes les pages
