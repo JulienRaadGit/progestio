@@ -73,6 +73,73 @@ function initializePageComponents() {
             this.reset();
         });
     }
+    
+    // Script du formulaire de devis
+    initializeDevisForm();
+}
+
+// Fonction pour initialiser le formulaire de devis
+function initializeDevisForm() {
+    // Gestion des sous-options pour chaque service
+    const serviceCheckboxes = document.querySelectorAll('.service-checkbox');
+    
+    if (serviceCheckboxes.length > 0) {
+        serviceCheckboxes.forEach(checkbox => {
+            checkbox.addEventListener('change', function() {
+                const parentOption = this.closest('.service-option');
+                const subOptions = parentOption.querySelector('.sub-options');
+                
+                if (this.checked) {
+                    subOptions.style.display = 'block';
+                } else {
+                    subOptions.style.display = 'none';
+                    // Décocher les sous-options quand le service principal est décoché
+                    const subCheckboxes = subOptions.querySelectorAll('input[type="checkbox"]');
+                    subCheckboxes.forEach(subCheck => {
+                        subCheck.checked = false;
+                    });
+                }
+            });
+        });
+        
+        // Validation du SIRET
+        const siretInput = document.getElementById('siret');
+        if (siretInput) {
+            siretInput.addEventListener('input', function() {
+                // Supprimer tous les caractères non numériques
+                this.value = this.value.replace(/[^0-9]/g, '');
+                
+                // Limiter à 14 chiffres
+                if (this.value.length > 14) {
+                    this.value = this.value.slice(0, 14);
+                }
+            });
+        }
+        
+        // Validation du formulaire avant envoi
+        const devisForm = document.getElementById('devisForm');
+        if (devisForm) {
+            devisForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                // Vérifier qu'au moins un service est sélectionné
+                const anyServiceChecked = Array.from(serviceCheckboxes).some(checkbox => checkbox.checked);
+                
+                if (!anyServiceChecked) {
+                    alert('Veuillez sélectionner au moins un service.');
+                    return;
+                }
+                
+                // Vous pourriez ajouter ici d'autres validations si nécessaire
+                
+                // Simuler l'envoi du formulaire
+                alert('Votre demande de devis a été envoyée avec succès ! Nous vous contacterons dans les plus brefs délais.');
+                
+                // En production, vous pourriez soumettre le formulaire ou utiliser fetch/ajax
+                // this.submit();
+            });
+        }
+    }
 }
 
 // Exécuter l'initialisation lorsque le DOM est chargé

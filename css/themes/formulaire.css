@@ -1,0 +1,273 @@
+/* Styles spécifiques à la page de devis */
+.devis-hero {
+    background-color: #f5f7fa;
+    padding: 80px 0 50px;
+    text-align: center;
+}
+
+.devis-form-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 50px 20px;
+}
+
+.form-section {
+    margin-bottom: 40px;
+}
+
+.form-section h3 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: #1e50a2;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.form-section h3:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 60px;
+    height: 3px;
+    background-color: #1e50a2;
+}
+
+.service-options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.service-option {
+    flex: 1 0 250px;
+    background: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    transition: all 0.3s ease;
+}
+
+.service-option:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.service-option-header {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 15px;
+}
+
+.service-option-header .checkbox-container {
+    margin-right: 10px;
+    margin-top: 5px;
+}
+
+.service-option-header h4 {
+    margin: 0;
+    font-size: 1.1rem;
+    color: #333;
+}
+
+.service-description {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.service-details {
+    margin-top: 15px;
+}
+
+.service-details label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 0.9rem;
+    color: #555;
+}
+
+.sub-option {
+    margin-left: 25px;
+    margin-top: 10px;
+    display: none;
+}
+
+.main-option:checked ~ .sub-option {
+    display: block;
+}
+
+.sub-option label {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.sub-option input[type="checkbox"] {
+    margin-right: 8px;
+}
+
+.company-info {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: #444;
+}
+
+.form-group input, 
+.form-group textarea,
+.form-group select {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 16px;
+    transition: border-color 0.3s;
+}
+
+.form-group input:focus, 
+.form-group textarea:focus,
+.form-group select:focus {
+    border-color: #1e50a2;
+    outline: none;
+}
+
+.form-group textarea {
+    min-height: 150px;
+    resize: vertical;
+}
+
+.required-field label:after {
+    content: " *";
+    color: #e74c3c;
+}
+
+.submit-container {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.submit-btn {
+    background-color: #1e50a2;
+    color: #fff;
+    padding: 14px 28px;
+    border: none;
+    border-radius: 30px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(30, 80, 162, 0.25);
+}
+
+.submit-btn:hover {
+    background-color: #15397b;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(30, 80, 162, 0.3);
+}
+
+.checkbox-container {
+    display: inline-block;
+    position: relative;
+    padding-left: 30px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    user-select: none;
+}
+
+.checkbox-container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    background-color: #fff;
+    border: 2px solid #ddd;
+    border-radius: 4px;
+    transition: all 0.2s ease;
+}
+
+.checkbox-container:hover input ~ .checkmark {
+    border-color: #1e50a2;
+}
+
+.checkbox-container input:checked ~ .checkmark {
+    background-color: #1e50a2;
+    border-color: #1e50a2;
+}
+
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.checkbox-container input:checked ~ .checkmark:after {
+    display: block;
+}
+
+.checkbox-container .checkmark:after {
+    left: 6px;
+    top: 2px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+}
+
+.hint-text {
+    font-size: 0.85rem;
+    color: #777;
+    margin-top: 5px;
+    font-style: italic;
+}
+
+.section-divider {
+    height: 1px;
+    background-color: #eee;
+    margin: 50px 0;
+    position: relative;
+}
+
+.section-divider:before {
+    content: '';
+    position: absolute;
+    top: -8px;
+    left: 50%;
+    width: 16px;
+    height: 16px;
+    background-color: #1e50a2;
+    border-radius: 50%;
+    transform: translateX(-50%);
+}
+
+@media (max-width: 768px) {
+    .company-info {
+        grid-template-columns: 1fr;
+    }
+    
+    .service-option {
+        flex: 1 0 100%;
+    }
+}
