@@ -74,7 +74,7 @@
 
 .service-description {
     font-size: 0.9rem;
-    color: #666;
+    color: #555; /* Changement de blanc (#ffffff) à un gris foncé (#555) */
     margin-bottom: 10px;
 }
 
@@ -86,7 +86,7 @@
     display: block;
     margin-bottom: 5px;
     font-size: 0.9rem;
-    color: #555;
+    color: #555; /* Changement de blanc (#ffffff) à un gris foncé (#555) */
 }
 
 .sub-option {
@@ -123,7 +123,12 @@
     display: block;
     margin-bottom: 8px;
     font-weight: 500;
-    color: #444;
+    color: #333; /* Changement de blanc (#ffffff) à un gris foncé (#333) */
+}
+
+.form-section p {
+    color: #555;
+    margin-bottom: 20px;
 }
 
 .form-group input, 
@@ -185,6 +190,7 @@
     margin-bottom: 12px;
     cursor: pointer;
     user-select: none;
+    color: #333;
 }
 
 .checkbox-container input {
@@ -260,6 +266,11 @@
     background-color: #1e50a2;
     border-radius: 50%;
     transform: translateX(-50%);
+}
+
+.service-option.selected,
+.service-option:hover {
+    border-color: #1e50a2;
 }
 
 @media (max-width: 768px) {
