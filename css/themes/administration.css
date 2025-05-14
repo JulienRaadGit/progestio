@@ -3,15 +3,15 @@
 /* Variables de thème */
 .theme-administration {
     /* Couleurs principales */
-    --primary-color: #1F3A93;
-    --primary-light: rgba(124, 142, 247, 0.1);
-    --primary-dark: #1F3A93;
+    --primary-color: #1e50a2;
+    --primary-light: rgba(30, 80, 162, 0.1);
+    --primary-dark: #2861c2;
     
     /* Couleurs neutres */
-    --text-color: #1a1a2a;
-    --text-secondary: #444;
-    --bg-light: #f9fafc;
-    --bg-dark: #1a1a2a;
+    --text-color: #ffffff;
+    --text-secondary: rgba(255, 255, 255, 0.8);
+    --bg-light: #1a1a2a;
+    --bg-dark: rgba(0, 0, 0, 0.7);
     --white: #ffffff;
     
     /* Espacement */
@@ -21,12 +21,12 @@
     --spacing-xl: 5rem;
     
     /* Border radius */
-    --border-radius: 12px;
+    --border-radius: 8px;
     
     /* Box shadow */
-    --shadow-sm: 0 5px 15px rgba(0, 0, 0, 0.05);
-    --shadow-md: 0 15px 30px rgba(0, 0, 0, 0.1);
-    --shadow-lg: 0 5px 15px rgba(0, 0, 0, 0.2);
+    --shadow-sm: 0 4px 8px rgba(0, 0, 0, 0.2);
+    --shadow-md: 0 8px 15px rgba(0, 0, 0, 0.3);
+    --shadow-lg: 0 6px 20px rgba(0, 0, 0, 0.4);
 }
 
 /* Section Héro */
@@ -34,7 +34,7 @@
     background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
                 url('admin-bg.jpg') center/cover no-repeat;
     color: var(--white);
-    padding: 8rem 2rem;
+    padding: 80px 0 50px;
     text-align: center;
     position: relative;
 }
@@ -43,14 +43,15 @@
     font-size: 3rem;
     margin-bottom: 1.5rem;
     color: var(--white);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .theme-administration .hero-section .subtitle {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     margin-bottom: 2rem;
     max-width: 800px;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 20px auto 0;
+    color: rgba(255, 255, 255, 0.9);
 }
 
 /* Section Présentation */
@@ -70,6 +71,21 @@
     font-size: 2.5rem;
     margin-bottom: 1.5rem;
     color: var(--text-color);
+    position: relative;
+    padding-bottom: 15px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.theme-administration .presentation-section h2:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background-color: var(--primary-color);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
 }
 
 .theme-administration .presentation-section p {
@@ -77,6 +93,7 @@
     max-width: 800px;
     margin: 0 auto;
     color: var(--text-secondary);
+    line-height: 1.5;
 }
 
 /* Grille de services */
@@ -88,17 +105,19 @@
 }
 
 .theme-administration .admin-service-card {
-    background: var(--white);
+    background: rgba(30, 40, 50, 0.7);
     border-radius: var(--border-radius);
     padding: 2rem;
     box-shadow: var(--shadow-sm);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    border-top: 4px solid var(--primary-color);
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .theme-administration .admin-service-card:hover {
     transform: translateY(-10px);
+    background: rgba(30, 40, 50, 0.8);
     box-shadow: var(--shadow-md);
+    border-color: var(--primary-color);
 }
 
 .theme-administration .service-icon {
@@ -111,12 +130,14 @@
     font-size: 1.5rem;
     margin-bottom: 1rem;
     color: var(--text-color);
+    font-weight: 600;
 }
 
 .theme-administration .admin-service-card p {
     color: var(--text-secondary);
     margin-bottom: 1.5rem;
     line-height: 1.6;
+    font-weight: 300;
 }
 
 .theme-administration .service-link {
@@ -144,7 +165,10 @@
 /* Section Avantages */
 .theme-administration .benefits-section {
     padding: var(--spacing-xl) 2rem;
-    background-color: var(--primary-light);
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    margin: 0 auto;
+    max-width: 1200px;
 }
 
 .theme-administration .benefits-grid {
@@ -155,16 +179,20 @@
 }
 
 .theme-administration .benefit-item {
-    background: var(--white);
+    background: rgba(30, 40, 50, 0.7);
     border-radius: var(--border-radius);
     padding: 2rem;
     text-align: center;
     box-shadow: var(--shadow-sm);
     transition: transform 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .theme-administration .benefit-item:hover {
     transform: translateY(-5px);
+    background: rgba(30, 40, 50, 0.8);
+    box-shadow: var(--shadow-md);
+    border-color: rgba(255, 255, 255, 0.2);
 }
 
 .theme-administration .benefit-icon {
@@ -177,11 +205,13 @@
     font-size: 1.3rem;
     margin-bottom: 1rem;
     color: var(--text-color);
+    font-weight: 600;
 }
 
 .theme-administration .benefit-item p {
     color: var(--text-secondary);
     line-height: 1.6;
+    font-weight: 300;
 }
 
 /* Section Contact */
@@ -190,11 +220,29 @@
     text-align: center;
     background-color: var(--bg-dark);
     color: var(--white);
+    border-radius: 10px;
+    margin: 40px auto;
+    max-width: 1200px;
 }
 
 .theme-administration .contact-section h2 {
     font-size: 2.5rem;
     margin-bottom: 1.5rem;
+    position: relative;
+    padding-bottom: 15px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.theme-administration .contact-section h2:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background-color: var(--primary-color);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
 }
 
 .theme-administration .contact-section p {
@@ -203,6 +251,7 @@
     max-width: 600px;
     margin-left: auto;
     margin-right: auto;
+    color: rgba(255, 255, 255, 0.8);
 }
 
 /* Boutons */
@@ -210,18 +259,20 @@
     display: inline-block;
     background-color: var(--primary-color);
     color: var(--white);
-    padding: 1rem 2rem;
-    border-radius: 4px;
+    padding: 14px 30px;
+    border-radius: 30px;
     text-decoration: none;
     font-weight: 600;
+    font-size: 16px;
     transition: all 0.3s ease;
-    text-transform: uppercase;
-    letter-spacing: 1px;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
 }
 
 .theme-administration .btn:hover {
     background-color: var(--primary-dark);
-    transform: translateY(-3px);
+    transform: translateY(-2px);
     box-shadow: var(--shadow-lg);
 }
 
@@ -231,53 +282,156 @@
     margin-bottom: 3rem;
     position: relative;
     color: var(--text-color);
+    padding-bottom: 15px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
 }
 
 .theme-administration .section-title::after {
     content: '';
     position: absolute;
-    bottom: -15px;
+    bottom: 0;
     left: 50%;
     transform: translateX(-50%);
-    width: 80px;
+    width: 60px;
     height: 3px;
     background-color: var(--primary-color);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+/* Section divider */
+.theme-administration .section-divider {
+    height: 1px;
+    background-color: rgba(255, 255, 255, 0.2);
+    margin: 50px 0;
+    position: relative;
+}
+
+.theme-administration .section-divider:before {
+    content: '';
+    position: absolute;
+    top: -8px;
+    left: 50%;
+    width: 16px;
+    height: 16px;
+    background-color: var(--primary-color);
+    border-radius: 50%;
+    transform: translateX(-50%);
+    box-shadow: 0 0 10px rgba(30, 80, 162, 0.5);
 }
 
 /* Formulaire */
 .theme-administration .contact-form {
-    background-color: var(--white);
+    background-color: rgba(30, 40, 50, 0.7);
     border-radius: var(--border-radius);
     padding: var(--spacing-md);
     box-shadow: var(--shadow-md);
     max-width: 600px;
     margin: 0 auto;
+    border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .theme-administration .form-group {
-    margin-bottom: var(--spacing-sm);
+    margin-bottom: 20px;
 }
 
 .theme-administration .form-group label {
     display: block;
-    margin-bottom: 0.5rem;
+    margin-bottom: 8px;
     color: var(--text-color);
     font-weight: 500;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
 }
 
 .theme-administration .form-control {
     width: 100%;
-    padding: 0.8rem;
-    border: 1px solid #e0e0e0;
-    border-radius: 4px;
-    font-size: 1rem;
-    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    padding: 12px 15px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 6px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    color: #333;
 }
 
 .theme-administration .form-control:focus {
+    background-color: #fff;
     border-color: var(--primary-color);
-    box-shadow: 0 0 0 3px var(--primary-light);
+    box-shadow: 0 0 0 3px rgba(30, 80, 162, 0.25);
     outline: none;
+}
+
+.theme-administration .required-field label:after {
+    content: " *";
+    color: #e74c3c;
+}
+
+/* Checkbox custom */
+.theme-administration .checkbox-container {
+    color: var(--white);
+    display: inline-block;
+    position: relative;
+    padding-left: 30px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    user-select: none;
+    line-height: 20px;
+}
+
+.theme-administration .checkbox-container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.theme-administration .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    background-color: #fff;
+    border: 2px solid #ddd;
+    border-radius: 4px;
+    transition: all 0.2s ease;
+}
+
+.theme-administration .checkbox-container:hover input ~ .checkmark {
+    border-color: var(--primary-color);
+}
+
+.theme-administration .checkbox-container input:checked ~ .checkmark {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.theme-administration .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.theme-administration .checkbox-container input:checked ~ .checkmark:after {
+    display: block;
+}
+
+.theme-administration .checkbox-container .checkmark:after {
+    left: 6px;
+    top: 2px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+}
+
+/* Hint text */
+.theme-administration .hint-text {
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.7);
+    margin-top: 5px;
+    font-style: italic;
 }
 
 /* Responsive */
@@ -307,27 +461,5 @@
         max-width: 500px;
         margin-left: auto;
         margin-right: auto;
-    }
-}
-
-/* Mode sombre pour le thème administration */
-@media (prefers-color-scheme: dark) {
-    .theme-administration {
-        --bg-light: #1e1e30;
-        --text-color: #e0e0e0;
-        --text-secondary: #b0b0b0;
-    }
-    
-    .theme-administration .admin-service-card,
-    .theme-administration .benefit-item,
-    .theme-administration .contact-form {
-        background-color: #2a2a40;
-        border-color: var(--primary-color);
-    }
-    
-    .theme-administration .admin-service-card h3,
-    .theme-administration .benefit-item h3,
-    .theme-administration .form-group label {
-        color: var(--white);
     }
 }
